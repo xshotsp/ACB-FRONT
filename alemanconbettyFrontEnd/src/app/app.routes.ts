@@ -1,8 +1,14 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
+
   {
-    path: 'login',
+    path: 'home',
+    loadComponent: () =>
+      import('./home/home.component').then((m) => m.HomeComponent),
+  },
+  {
+    path: 'auth/login',
     loadComponent: () =>
       import('./auth/login/login').then((m) => m.LoginComponent),
   },
@@ -19,6 +25,6 @@ export const routes: Routes = [
       import('./auth/guards/auth.guard').then(m => m.AuthGuard)
     ],
   },
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: '**', redirectTo: 'login' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', redirectTo: 'home' },
 ];

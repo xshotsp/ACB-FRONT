@@ -1,5 +1,37 @@
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-  <input type="email" formControlName="email" placeholder="Email" />
-  <input type="password" formControlName="password" placeholder="Password" />
-  <button type="submit">Login</button>
-</form>
+<div class="login-body">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+    <div class="box-shadow">
+      <img src="assets/aleman.png" alt="logo" class="logo" />
+      <h1 class="title-login">Hola, Bienvenido</h1>
+      <label class="message-login mb-3"
+        >Ingresa con tus credenciales para continuar</label
+      >
+      <p-floatLabel class="">
+        <input
+          pInputText
+          id="username"
+          formControlName="username"
+          class="input-fields"
+        />
+        <label for="username">Usuario</label>
+      </p-floatLabel>
+
+      <p-floatLabel class="mt-3">
+        <input
+          class="input-fields"
+          pInputText
+          id="password"
+          type="password"
+          formControlName="password"
+        />
+        <label for="password" class="">Contraseña</label>
+      </p-floatLabel>
+
+      <button pButton class="p-button" type="submit">Ingresar</button>
+      <div class="auth-links my-3">
+        <a href="#">Olvidé mi contraseña</a>
+        <a href="#">No tienes una cuenta? <span class="span">Registrate Aqui!</span></a>
+      </div>
+    </div>
+  </form>
+</div>

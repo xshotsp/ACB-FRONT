@@ -6,13 +6,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://127.0.0.1:8000/'; // Ajusta según backend
+  private apiUrl = 'http://127.0.0.1:8000'; // Ajusta según backend
 
   constructor(private http: HttpClient) {}
 
-  login(email: string, password: string): Observable<any> {
+  login(username: string, password: string): Observable<any> {
     const body = new URLSearchParams();
-    body.set('username', email);
+    body.set('username', username);
     body.set('password', password);
 
     return this.http.post(`${this.apiUrl}/auth/login`, body.toString(), {
@@ -20,10 +20,10 @@ export class AuthService {
     });
   }
 
-  register(full_name: string, email: string, password: string): Observable<any> {
+  register(full_name: string, username: string, password: string): Observable<any> {
     return this.http.post(`${this.apiUrl}/auth/register`, {
       full_name,
-      email,
+      username,
       password
     });
   }

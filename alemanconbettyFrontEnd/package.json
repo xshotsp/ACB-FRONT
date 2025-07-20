@@ -1,53 +1,71 @@
 {
-  "name": "alemanconbetty-front-end",
-  "version": "0.0.0",
+  "name": "alemanconbetty",
+  "version": "4.1.0",
+  "author": "-",
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-prod": "ng build --configuration production --base-href /angular/free/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:alemanconbettyFrontEnd": "node dist/alemanconbettyFrontEnd/server/server.mjs"
+    "compodoc": "npx compodoc -p tsconfig.doc.json",
+    "compodoc:build": "compodoc -p tsconfig.doc.json -s",
+    "compodoc:serve": "compodoc -s"
   },
-  "prettier": {
-    "overrides": [
-      {
-        "files": "*.html",
-        "options": {
-          "parser": "angular"
-        }
-      }
-    ]
-  },
-  "private": true,
   "dependencies": {
-    "@angular/common": "^20.0.0",
-    "@angular/compiler": "^20.0.0",
-    "@angular/core": "^20.0.0",
-    "@angular/forms": "^20.0.0",
-    "@angular/platform-browser": "^20.0.0",
-    "@angular/platform-server": "^20.0.0",
-    "@angular/router": "^20.0.0",
-    "@angular/ssr": "^20.0.4",
-    "@stripe/stripe-js": "^7.4.0",
-    "express": "^5.1.0",
-    "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.15.0"
+    "@angular/animations": "^18.0.5",
+    "@angular/cdk": "^18.0.5",
+    "@angular/common": "^18.2.13",
+    "@angular/compiler": "^18.0.5",
+    "@angular/core": "^18.0.5",
+    "@angular/forms": "^18.0.5",
+    "@angular/platform-browser": "^18.0.5",
+    "@angular/platform-browser-dynamic": "^18.0.5",
+    "@angular/platform-server": "^20.0.5",
+    "@angular/router": "^18.0.5",
+    "@angular/ssr": "^18.2.20",
+    "@fullcalendar/angular": "^6.1.16",
+    "@fullcalendar/core": "^6.1.15",
+    "@fullcalendar/daygrid": "^6.1.15",
+    "@fullcalendar/interaction": "^6.1.15",
+    "@fullcalendar/timegrid": "^6.1.15",
+    "@ng-bootstrap/ng-bootstrap": "^17.0.0",
+    "@popperjs/core": "^2.11.8",
+    "@types/grecaptcha": "^3.0.9",
+    "angular-user-idle": "^4.0.0",
+    "apexcharts": "^3.49.2",
+    "axios": "^1.7.7",
+    "bootstrap": "^5.3.7",
+    "date-fns": "^4.1.0",
+    "hashids": "^2.3.0",
+    "jwt-decode": "^4.0.0",
+    "keycloak-angular": "^16.1.0",
+    "keycloak-js": "^26.0.7",
+    "libsodium-wrappers": "^0.7.15",
+    "ng-apexcharts": "^1.11.0",
+    "ngx-scrollbar": "^15.0.1",
+    "primeicons": "^7.0.0",
+    "primeng": "^17.18.15",
+    "rxjs": "~7.8.1",
+    "tslib": "^2.8.1",
+    "zone.js": "~0.14.7"
   },
   "devDependencies": {
-    "@angular/build": "^20.0.4",
-    "@angular/cli": "^20.0.4",
-    "@angular/compiler-cli": "^20.0.0",
-    "@types/express": "^5.0.1",
-    "@types/jasmine": "~5.1.0",
-    "@types/node": "^20.17.19",
-    "jasmine-core": "~5.7.0",
-    "karma": "~6.4.0",
+    "@angular-devkit/build-angular": "^18.0.6",
+    "@angular/cli": "~18.0.6",
+    "@angular/compiler-cli": "^18.0.5",
+    "@compodoc/compodoc": "^1.1.26",
+    "@types/jasmine": "~5.1.4",
+    "@types/jest": "^29.5.14",
+    "jasmine-core": "~5.1.2",
+    "karma": "~6.4.3",
     "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.0",
+    "karma-coverage": "~2.2.1",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.8.2"
+    "prettier": "3.3.2",
+    "typescript": "5.4"
   }
 }

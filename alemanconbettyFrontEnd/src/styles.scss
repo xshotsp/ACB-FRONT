@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  text-decoration: none;
+  color: #ffcc00;
+}
+
+.p-button {
+  background-color: #ffcc00; /* Amarillo bandera */
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+.input-fields {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  height: 40px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+}
+
+.input-fields:focus {
+  border-color: #ffcc00; /* Amarillo bandera */
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.7);
+  transform: scale(1.05);
+  outline: none;
+}
+.box-shadow {
+  margin-bottom: 4rem;
+  background-color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  border-color: #dddddd57;
+  border-radius: 15px;
+  animation: fadeInDown 1s ease forwards;
+}
